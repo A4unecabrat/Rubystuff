@@ -17,4 +17,4 @@ def DashInsert(number):
         if int(b[i]) % 2 != 0 and int(b[i - 1]) % 2 != 0:
             c.append('-')
         c.append(b[i])
-return(''.join(c))
+    return(''.join(c))
