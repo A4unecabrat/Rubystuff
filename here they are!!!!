@@ -1,0 +1,20 @@
+def ExOh(text):
+    return list(text).count('o') == list(text).count('x')
+
+
+def ABCheck(text):
+    b=list(text)
+    for i in range(0,len(b)):
+        if b[i]=='a':
+            if i+4 < len(b) and b[i+4]=='b':
+                return True
+    return False
+
+def DashInsert(number):
+    c=list()
+    b=list(str(number))
+    for i in range(0,len(b)):
+        if int(b[i]) % 2 != 0 and int(b[i - 1]) % 2 != 0:
+            c.append('-')
+        c.append(b[i])
+return(''.join(c))
