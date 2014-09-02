@@ -12,9 +12,10 @@ def ABCheck(text):
 
 def DashInsert(number):
     c=list()
-    b=list(str(number))
-    for i in range(0,len(b)):
-        if int(b[i]) % 2 != 0 and int(b[i - 1]) % 2 != 0:
-            c.append('-')
-        c.append(b[i])
-    return(''.join(c))
+	b=list(str(number))
+	for i in range(0,len(b)):
+		c.append(b[i])
+		if int(b[i]) % 2 != 0:
+			if i+1<len(b) and int(b[i + 1]) % 2 != 0:
+				c.append('-')
+	return(''.join(c))
